@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Love</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #d32f2f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      /* Image URL from a server or local */
+      background-image: url('file:///C:/Users/hi/Downloads/PG.jpeg'), linear-gradient(to right, #f06292, #ec407a);
+      background-size: cover;
+      background-position: center;
+      animation: bgColorChange 10s infinite alternate;
+    }
+
+    @keyframes bgColorChange {
+      0% { background-color: #f06292; }
+      100% { background-color: #ec407a; }
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #d32f2f;
+      margin-bottom: 30px;
+    }
+
+    .heart {
+      font-size: 3em;
+      color: #f50057;
+      animation: heartBeat 1s infinite;
+      display: none; /* Hidden initially */
+    }
+
+    @keyframes heartBeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .button {
+      padding: 10px 30px;
+      background-color: #d32f2f;
+      color: white;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #c2185b;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>HEHE IT'S US</h1>
+    <p>Here's a surprise for you!</p>
+    
+    <!-- Button to trigger the Valentine's message -->
+    <button class="button" onclick="wishHappyValentines()">Click Here</button>
+
+    <!-- Hidden message and heart that appears after clicking -->
+    <div id="valentinesMessage" style="display: none;">
+      <h1>Happy Valentine's Day Gulshan!</h1>
+      <div class="heart">❤️</div>
+      <p>"Love is the best thing in the world, and it's worth celebrating with you!"</p>
+    </div>
+  </div>
+
+  <script>
+    function wishHappyValentines() {
+      // Hide the "Click Here" button
+      document.querySelector('.button').style.display = 'none';
+      
+      // Show the Valentine's message and heart
+      document.getElementById('valentinesMessage').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
